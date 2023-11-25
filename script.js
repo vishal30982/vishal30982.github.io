@@ -5,3 +5,5 @@ function ChangeTheme (theme) {
 }
 let choosenTheme = localStorage.getItem('theme');
 document.querySelector(':root').style.setProperty('--theme', choosenTheme);
+
+let share_btn = document.querySelector('#share-area')

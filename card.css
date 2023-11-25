@@ -171,14 +171,14 @@ html, body {
     background-color: green;
 }
 #share-popup {
-    /* display: none; */
     position: absolute;
     background-color: white;
     top: 50%;
-    box-shadow: 0 0 10px 10px black;
+    box-shadow: 0 0 10px 2px black;
     width: max-content;
     height: max-content;
     display: flex;
+    display: none;
 }
 #share-popup #share {
     display: flex;
