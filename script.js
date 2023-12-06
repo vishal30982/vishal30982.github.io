@@ -6,4 +6,12 @@ function ChangeTheme (theme) {
 let choosenTheme = localStorage.getItem('theme');
 document.querySelector(':root').style.setProperty('--theme', choosenTheme);
 
-let share_btn = document.querySelector('#share-area')
+let share_btn = document.querySelector('#share-area button')
+let share_link = location.href;
+share_btn.addEventListener('click', async () => {
+    try {
+        await navigator.share(share_link)
+    } catch (error) {
+        alert('Something Went Wrong In Sharing!')
+    }
+})
