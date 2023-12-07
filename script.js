@@ -10,7 +10,9 @@ let share_btn = document.querySelector('#share-area button')
 let share_link = location.href;
 share_btn.addEventListener('click', async () => {
     try {
-        await navigator.share(share_link)
+        await navigator.share({
+            url: share_link
+        })
     } catch (error) {
         alert('Something Went Wrong In Sharing!')
     }
