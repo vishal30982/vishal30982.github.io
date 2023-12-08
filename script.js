@@ -14,8 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
             await navigator.share({
                 url: share_link
             })
+
         } catch (error) {
-            alert('Something Went Wrong In Sharing!')
+            // Handle specific errors, e.g., if user cancels the sharing
+            if (error.name === 'AbortError') {
+                console.log('User canceled sharing');
+            } else {
+                // Handle other errors
+                alert('Something went wrong in sharing!');
+            }
         }
     })
 })
