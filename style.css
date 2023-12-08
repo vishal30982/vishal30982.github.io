@@ -204,7 +204,7 @@ html, body {
     height: 40%;
     border: 1px solid black;
 }
-#share-area {
+#share-btn {
     position: fixed;
     top: 0;
     right: 0;
@@ -217,7 +217,5 @@ html, body {
     justify-content: center;
     margin-top: 5px;
     margin-right: 5px;
-}
-#share-area span.share-icon {
-    cursor: pointer;
+    border: none;
 }
