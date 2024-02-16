@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --theme: red;
+    --theme: yellow;
 }
 html, body {
     margin: 0;
@@ -122,6 +122,7 @@ html, body {
     /* border: 2px solid black; */
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    overflow: auto;
 }
 #theme {
     height: 8%;
@@ -143,7 +144,8 @@ html, body {
     cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+    flex-shrink: 0;
 }
 #social-icons .icons img {
     width: 80%;
@@ -151,6 +153,9 @@ html, body {
     text-align: center;
     vertical-align: middle;
     /* mix-blend-mode:luminosity; */
+}
+#social-icons .group {
+    display: none;
 }
 .theme-btn {
     height: 30px;
@@ -218,4 +223,18 @@ html, body {
     margin-top: 5px;
     margin-right: 5px;
     border: none;
+}
+#social-icons .active {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#social-icons .move {
+    width: clamp(25px, 50px, 75px);
+    height: 50px;
+    font-size: 35px;
+    box-shadow: 0px 0px 2px 2px black;
+    border-radius: 50%;
+    text-align: center;
 }

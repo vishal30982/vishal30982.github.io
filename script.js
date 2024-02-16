@@ -30,3 +30,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 })
+
+function slideRight (btn) {
+    let active = document.querySelector('.active');
+    let parent = document.querySelector('#social-icons')
+    if(document.querySelector('#leftBtn') === null) {
+        leftBtn = btn.cloneNode(false);
+        leftBtn.innerHTML = '&lsaquo;';
+        leftBtn.id = 'leftBtn'
+        leftBtn.onclick =  function () {
+            slideLeft(leftBtn)
+        };
+        parent.prepend(leftBtn);
+    }
+    if(active.nextElementSibling.classList.contains('group')) {
+        active.classList.remove('active');
+        active.nextElementSibling.classList.add('active');
+        active = document.querySelector('.active')
+        if(active.nextElementSibling.classList.contains('group') === false) {
+            btn.style.display = 'none'
+        }
+    }
+}
+function slideLeft(btn) {
+    let active = document.querySelector('.active');
+    let parent = document.querySelector('#social-icons')
+    document.querySelector('#rightBtn').style.display = 'inline';
+    if(active.previousElementSibling.classList.contains('group')) {
+        active.classList.remove('active');
+        active.previousElementSibling.classList.add('active');
+        active = document.querySelector('.active')
+        if(active.previousElementSibling.classList.contains('group') === false) {
+            parent.removeChild(btn)
+        }
+    }
+}
