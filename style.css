@@ -12,12 +12,13 @@ html, body {
 }
 #main {
     width: 100vw;
-    height: 100vh;
+    height: 646px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--theme);
     flex-direction: column;
+    overflow-y: scroll;
 }
 #card {
     height: 88%;
@@ -237,4 +238,13 @@ html, body {
     box-shadow: 0px 0px 2px 2px black;
     border-radius: 50%;
     text-align: center;
+}
+#stuffs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: white;
+    width: clamp(min(300px), 40%, max(50%));
+    margin-top: 10px;
 }
